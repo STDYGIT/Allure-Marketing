@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Allure Marketing - Premium Branding & Design</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .testimonial-card {
+
+            width: 280px;
+
+        }
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+
+            margin: 0;
+
+            font-family: 'Inter', system-ui, sans-serif;
+
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+
+            color: #f0f0f0;
+
+            overflow-x: hidden;
+
+        }
+
+        .gradient-text {
+
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+
+        }
+
+        .glass-effect {
+
+            background: rgba(0, 0, 0, 0.4);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(212, 175, 55, 0.2);
+
+        }
+
+        .premium-card {
+
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+
+            border: 1px solid rgba(212, 175, 55, 0.3);
+
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .premium-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(212, 175, 55, 0.6);
+
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+
+        }
+
+        .hover-glow:hover {
+
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+
+            transform: translateY(-3px);
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .gold-gradient {
+
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
+
+        }
+
+        /* Enhanced Logo Styling */
+
+        .logo-container {
+
+            position: relative;
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(212, 175, 55, 0.3);
+
+            transition: all 0.3s ease;
+
+        }
+
+        .logo-container:hover {
+
+            border-color: rgba(212, 175, 55, 0.8);
+
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+
+        }
+
+        .logo-container img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+        }
+
+        /* Fixed Mobile Menu */
+
+        .mobile-menu {
+
+            transform: translateY(-100%);
+
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+            background: rgba(0, 0, 0, 0.98);
+
+            backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+        }
+
+        .mobile-menu.active {
+
+            transform: translateY(0);
+
+        }
+
+        .hamburger {
+
+            width: 28px;
+
+            height: 28px;
+
+            position: relative;
+
+            cursor: pointer;
+
+            z-index: 1001;
+
+        }
+
+        .hamburger span {
+
+            display: block;
+
+            position: absolute;
+
+            height: 3px;
+
+            width: 100%;
+
+            background: #fff;
+
+            border-radius: 2px;
+
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            left: 0;
+
+        }
+
+        .hamburger span:nth-child(1) {
+
+            top: 0;
+
+        }
+
+        .hamburger span:nth-child(2) {
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+        }
+
+        .hamburger span:nth-child(3) {
+
+            bottom: 0;
+
+        }
+
+        .hamburger.active span:nth-child(1) {
+
+            top: 50%;
+
+            transform: translateY(-50%) rotate(45deg);
+
+        }
+
+        .hamburger.active span:nth-child(2) {
+
+            opacity: 0;
+
+            transform: translateX(20px);
+
+        }
+
+        .hamburger.active span:nth-child(3) {
+
+            bottom: 50%;
+
+            transform: translateY(50%) rotate(-45deg);
+
+        }
+
+        /* Floating Animation */
+
+        @keyframes float {
+
+            0%,
+
+            100% {
+
+                transform: translateY(0px);
+
+            }
+
+            50% {
+
+                transform: translateY(-20px);
+
+            }
+
+        }
+
+        .floating {
+
+            animation: float 6s ease-in-out infinite;
+
+        }
+
+        /* Enhanced Service Cards */
+
+        .service-card {
+
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+
+            border: 1px solid rgba(212, 175, 55, 0.2);
+
+            /* transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .service-card::before {
+
+            /* content: ''; */
+
+            position: absolute;
+
+            top: 0;
+
+            /* left: -100%; */
+
+            width: 100%;
+
+            height: 100%;
+
+            /* background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent); */
+
+            /* transition: left 0.5s ease; */
+
+        }
+
+        /* .service-card:hover::before {
+
+            left: 100%;
+
+        } */
+
+        .service-card:hover {
+
+            /* transform: translateY(-12px) scale(1.02); */
+
+            border-color: rgba(212, 175, 55, 0.6);
+
+            /* box-shadow: 0 25px 80px rgba(212, 175, 55, 0.25); */
+
+        }
+
+        .service-icon {
+
+            background: linear-gradient(135deg, #d4af37, #311414);
+
+            transition: all 0.3s ease;
+
+        }
+
+        .service-card:hover .service-icon {
+
+            transform: scale(1.1) rotate(5deg);
+
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+
+        }
+
+        /* Professional Portfolio Grid - Fixed Sizing */
+
+        .portfolio-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+            gap: 24px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+        .reel-container {
+
+            position: relative;
+
+            aspect-ratio: 9/16;
+
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            border: 2px solid rgba(212, 175, 55, 0.2);
+
+            width: 100%;
+
+            max-width: 300px;
+
+            margin: 0 auto;
+
+        }
+
+        .reel-container:hover {
+
+            /* transform: scale(1.05); */
+
+            border-color: rgba(212, 175, 55, 0.6);
+
+            /* box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3); */
+
+        }
+
+        .reel-thumbnail {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.4s ease;
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+        }
+
+        .reel-container:hover .reel-thumbnail {
+
+            /* transform: scale(1.1); */
+
+        }
+
+        /* Local Video Thumbnail Generation */
+
+        .video-thumbnail-generator {
+
+            display: none;
+
+        }
+
+        /* Thumbnail Loading States */
+
+        .thumbnail-loading {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            color: rgba(212, 175, 55, 0.8);
+
+            font-size: 14px;
+
+            z-index: 1;
+
+            text-align: center;
+
+        }
+
+        .thumbnail-error {
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: rgba(212, 175, 55, 0.6);
+
+            font-size: 12px;
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+        @keyframes shimmer {
+
+            0% {
+
+                opacity: 0.6;
+
+            }
+
+            50% {
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                opacity: 0.6;
+
+            }
+
+        }
+
+        .thumbnail-loading {
+
+            animation: shimmer 1.5s ease-in-out infinite;
+
+        }
+
+        .reel-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(to bottom,
+
+                    transparent 0%,
+
+                    transparent 60%,
+
+                    rgba(0, 0, 0, 0.8) 100%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+            z-index: 2;
+
+        }
+
+        .reel-play-button {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 80px;
+
+            height: 80px;
+
+            background: rgba(212, 175, 55, 0.9);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            backdrop-filter: blur(10px);
+
+            opacity: 0;
+
+            z-index: 3;
+
+        }
+
+        .reel-container:hover .reel-play-button {
+
+            opacity: 1;
+
+            transform: translate(-50%, -50%) scale(1.1);
+
+        }
+
+        .reel-play-button::after {
+
+            content: '';
+
+            width: 0;
+
+            height: 0;
+
+            border-left: 16px solid #000;
+
+            border-top: 12px solid transparent;
+
+            border-bottom: 12px solid transparent;
+
+            margin-left: 4px;
+
+        }
+
+        .reel-info {
+
+            margin-top: auto;
+
+            z-index: 2;
+
+        }
+
+        .reel-title {
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: white;
+
+            margin-bottom: 8px;
+
+            line-height: 1.2;
+
+        }
+
+        .reel-description {
+
+            font-size: 14px;
+
+            color: rgba(255, 255, 255, 0.8);
+
+            margin-bottom: 12px;
+
+            line-height: 1.3;
+
+        }
+
+        /* Minimal Social Stats with Lucide Icons */
+
+        .reel-stats {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            font-size: 12px;
+
+            color: rgba(255, 255, 255, 0.7);
+
+        }
+
+        .reel-stat {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+        }
+
+        .reel-stat svg {
+
+            width: 14px;
+
+            height: 14px;
+
+            stroke: currentColor;
+
+        }
+
+        .category-filter {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-bottom: 40px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .filter-btn {
+
+            padding: 10px 20px;
+
+            background: rgba(212, 175, 55, 0.1);
+
+            border: 1px solid rgba(212, 175, 55, 0.3);
+
+            border-radius: 25px;
+
+            color: rgba(212, 175, 55, 0.8);
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+        }
+
+        .filter-btn:hover,
+
+        .filter-btn.active {
+
+            background: rgba(212, 175, 55, 0.2);
+
+            border-color: rgba(212, 175, 55, 0.8);
+
+            color: #ffd700;
+
+            transform: translateY(-2px);
+
+        }
+
+        /* New Testimonials Section - Your Experience, Our Pride */
+
+        .testimonials-container {
+
+            position: relative;
+
+            height: 400px;
+
+            overflow: hidden;
+
+            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+
+            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+
+        }
+
+        .testimonial-row {
+
+            position: absolute;
+
+            display: flex;
+
+            width: 100%;
+
+            height: 180px;
+
+            overflow: hidden;
+
+        }
+
+        .testimonial-row-left {
+
+            top: 0;
+
+        }
+
+        .testimonial-row-right {
+
+            top: 200px;
+
+        }
+
+        .testimonial-track {
+
+            display: flex;
+
+            gap: 20px;
+
+            animation-duration: 40s;
+
+            animation-timing-function: linear;
+
+            animation-iteration-count: infinite;
+
+            will-change: transform;
+
+        }
+
+        .testimonial-row-left .testimonial-track {
+
+            animation-name: slideLeft;
+
+        }
+
+        .testimonial-row-right .testimonial-track {
+
+            animation-name: slideRight;
+
+        }
+
+        /* Pause animation on hover */
+
+        .testimonial-row:hover .testimonial-track {
+
+            animation-play-state: paused;
+
+        }
+
+        @keyframes slideLeft {
+
+            0% {
+
+                transform: translateX(0);
+
+            }
+
+            100% {
+
+                transform: translateX(-50%);
+
+            }
+
+        }
+
+        @keyframes slideRight {
+
+            0% {
+
+                transform: translateX(-50%);
+
+            }
+
+            100% {
+
+                transform: translateX(0);
+
+            }
+
+        }
+
+        .testimonial-card-new {
+
+            flex-shrink: 0;
+
+            width: 320px;
+
+            padding: 24px;
+
+            border-radius: 20px;
+
+            background: rgba(0, 0, 0, 0.4);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(212, 175, 55, 0.2);
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            cursor: pointer;
+
+        }
+
+        .testimonial-card-new:hover {
+
+            /* transform: translateY(-8px); */
+
+            border-color: rgba(212, 175, 55, 0.6);
+
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+
+        }
+
+        .testimonial-header {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 16px;
+
+        }
+
+        .testimonial-avatar {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            color: white;
+
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+            margin-right: 12px;
+
+            flex-shrink: 0;
+
+        }
+
+        .testimonial-name {
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: white;
+
+            margin: 0;
+
+        }
+
+        .testimonial-role {
+
+            font-size: 14px;
+
+            color: rgba(212, 175, 55, 0.8);
+
+            margin: 2px 0 0 0;
+
+        }
+
+        .testimonial-text {
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: rgba(255, 255, 255, 0.8);
+
+            margin: 0;
+
+        }
+
+        /* Enhanced Video Modal for Reels */
+
+        .video-modal {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.95);
+
+            backdrop-filter: blur(15px);
+
+            z-index: 9999;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .video-modal.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+        .video-modal-content {
+
+            position: relative;
+
+            width: 90%;
+
+            max-width: 400px;
+
+            aspect-ratio: 9/16;
+
+            background: #000;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow: 0 30px 80px rgba(212, 175, 55, 0.4);
+
+            border: 3px solid rgba(212, 175, 55, 0.4);
+
+            transform: scale(0.8) rotateX(10deg);
+
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .video-modal.active .video-modal-content {
+
+            transform: scale(1) rotateX(0deg);
+
+        }
+
+        .video-modal iframe,
+
+        .video-modal video {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+
+        }
+
+        .video-modal-close {
+
+            position: absolute;
+
+            top: -60px;
+
+            right: 0;
+
+            width: 50px;
+
+            height: 50px;
+
+            background: rgba(212, 175, 55, 0.9);
+
+            border: none;
+
+            border-radius: 50%;
+
+            color: #000;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+        .video-modal-close:hover {
+
+            background: rgba(212, 175, 55, 1);
+
+            transform: scale(1.1) rotate(90deg);
+
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+
+        }
+
+        /* Contact Form Enhancements */
+
+        .contact-form input,
+
+        .contact-form textarea,
+
+        .contact-form select {
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border: 1px solid rgba(212, 175, 55, 0.3);
+
+            color: white;
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .contact-form input:focus,
+
+        .contact-form textarea:focus,
+
+        .contact-form select:focus {
+
+            outline: none;
+
+            border-color: rgba(212, 175, 55, 0.8);
+
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+
+            transform: translateY(-2px);
+
+        }
+
+        /* Responsive Improvements */
+
+        @media (max-width: 1024px) {
+
+            .testimonials-container {
+
+                height: 350px;
+
+            }
+
+
+
+            .testimonial-card-new {
+
+                width: 280px;
+
+                padding: 20px;
+
+            }
+
+
+
+            .testimonial-row {
+
+                height: 160px;
+
+            }
+
+
+
+            .testimonial-row-right {
+
+                top: 180px;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .hero-title {
+
+                font-size: 2.5rem;
+
+                line-height: 1.1;
+
+            }
+
+            .section-title {
+
+                font-size: 2rem;
+
+            }
+
+            .video-modal-content {
+
+                width: 95%;
+
+                max-width: 350px;
+
+                border-radius: 20px;
+
+            }
+
+            .video-modal-close {
+
+                top: -50px;
+
+                right: 10px;
+
+                width: 45px;
+
+                height: 45px;
+
+                font-size: 20px;
+
+            }
+
+            .service-card {
+
+                margin-bottom: 1rem;
+
+            }
+
+            .portfolio-grid {
+
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+                gap: 16px;
+
+            }
+
+            .reel-container {
+
+                border-radius: 16px;
+
+                max-width: 250px;
+
+            }
+
+            .reel-play-button {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+            .category-filter {
+
+                gap: 8px;
+
+                margin-bottom: 30px;
+
+            }
+
+            .filter-btn {
+
+                padding: 8px 16px;
+
+                font-size: 13px;
+
+            }
+
+            .testimonials-container {
+
+                height: 300px;
+
+            }
+
+
+
+            .testimonial-card-new {
+
+                width: 250px;
+
+                padding: 16px;
+
+            }
+
+
+
+            .testimonial-row {
+
+                height: 140px;
+
+            }
+
+
+
+            .testimonial-row-right {
+
+                top: 160px;
+
+            }
+
+
+
+            .testimonial-name {
+
+                font-size: 14px;
+
+            }
+
+
+
+            .testimonial-role {
+
+                font-size: 12px;
+
+            }
+
+
+
+            .testimonial-text {
+
+                font-size: 13px;
+
+            }
+
+
+
+            .testimonial-avatar {
+
+                width: 40px;
+
+                height: 40px;
+
+                font-size: 14px;
+
+            }
+
+        }
+
+        /* Smooth Page Transitions */
+
+        * {
+
+            transition-property: transform, opacity, background-color, border-color, box-shadow;
+
+            transition-duration: 0.3s;
+
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .video-error {
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: rgba(212, 175, 55, 0.6);
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+        .video-error i {
+
+            width: 48px;
+
+            height: 48px;
+
+            margin-bottom: 16px;
+
+            stroke-width: 1.5;
+
+        }
+
+        .video-error p {
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+        .video-error small {
+
+            font-size: 12px;
+
+            opacity: 0.8;
+
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <!-- Hidden video element for local thumbnail generation -->
+
+    <video class="video-thumbnail-generator" id="thumbnailGenerator" muted></video>
+
+    <canvas class="video-thumbnail-generator" id="thumbnailCanvas"></canvas>
+
+
+
+    <!-- Fixed Navigation -->
+
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+
+            <!-- Enhanced Logo -->
+
+            <div class="flex items-center space-x-3">
+
+                <div class="logo-container">
+
+                    <img src="logo.jpeg" alt="Allure Marketing Logo">
+
+                </div>
+
+                <div>
+
+                    <div class="text-xl font-bold gradient-text">ALLURE</div>
+
+                    <div class="text-xs text-gray-400 -mt-1">MARKETING</div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Desktop Menu -->
+
+            <ul class="hidden md:flex space-x-8">
+
+                <li><a href="#hero" class="text-white hover:text-yellow-400 transition-colors">Home</a></li>
+
+                <li><a href="#review" class="text-white hover:text-yellow-400 transition-colors">Experience</a></li>
+
+                <li><a href="#services" class="text-white hover:text-yellow-400 transition-colors">Services</a></li>
+
+                <li><a href="#portfolio" class="text-white hover:text-yellow-400 transition-colors">Portfolio</a></li>
+
+                <li><a href="#contact" class="text-white hover:text-yellow-400 transition-colors">Contact</a></li>
+
+            </ul>
+
+
+
+            <!-- Fixed Mobile Menu Button -->
+
+            <div class="md:hidden hamburger" onclick="toggleMobileMenu()" id="hamburger">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Fixed Mobile Menu -->
+
+        <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 w-full h-screen md:hidden z-40">
+
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+
+                <a href="#hero" class="text-white hover:text-yellow-400 transition-colors text-3xl font-light"
+                    onclick="toggleMobileMenu()">Home</a>
+
+                <a href="#review" class="text-white hover:text-yellow-400 transition-colors text-3xl font-light"
+                    onclick="toggleMobileMenu()">Experience</a>
+
+                <a href="#services" class="text-white hover:text-yellow-400 transition-colors text-3xl font-light"
+                    onclick="toggleMobileMenu()">Services</a>
+
+                <a href="#portfolio" class="text-white hover:text-yellow-400 transition-colors text-3xl font-light"
+                    onclick="toggleMobileMenu()">Portfolio</a>
+
+                <a href="#contact" class="text-white hover:text-yellow-400 transition-colors text-3xl font-light"
+                    onclick="toggleMobileMenu()">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+
+        <div class="absolute inset-0 bg-gradient-to-r from-yellow-600/10 to-yellow-400/10"></div>
+
+        <div class="text-center z-10 px-4 sm:px-6 max-w-6xl mx-auto">
+
+            <div class="floating">
+
+                <h1 class="hero-title text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+
+                    Allure <span class="gradient-text">Marketing</span><br class="hidden sm:block">
+
+                    That <span class="gradient-text">Elevates</span>
+
+                </h1>
+
+            </div>
+
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+
+                ELEVATE YOUR BRAND WITH STUNNING DIGITAL SOLUTIONS.
+                Allure Marketing crafts premium content, high-ROI Meta ads, and strategic influencer campaigns to drive
+                real growth.
+
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/919548190688" target="_blank">
+
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 gold-gradient rounded-full text-black font-semibold hover-glow">
+
+                        Start Your Project
+
+                    </button>
+                </a>
+                <!-- <button
+
+                    class="w-full sm:w-auto px-8 py-4 gold-gradient rounded-full text-black font-semibold hover-glow">
+
+                    Start Your Project
+
+                </button> -->
+                <a href="#portfolio">
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 glass-effect rounded-full text-white font-semibold hover-glow">
+
+                        View Our Work
+
+                    </button>
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Floating Elements -->
+
+        <div
+            class="absolute top-20 left-4 sm:left-10 w-16 sm:w-20 h-16 sm:h-20 gold-gradient rounded-full opacity-20 floating">
+
+        </div>
+
+        <div class="absolute bottom-20 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 gold-gradient rounded-full opacity-20 floating"
+            style="animation-delay: -3s;"></div>
+
+    </section>
+
+
+
+    <!-- Enhanced Services Section -->
+
+    <section id="services" class="py-16 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Our Services
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Comprehensive branding solutions that elevate your business to extraordinary heights
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+                <!-- Website Development -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/code" target="_blank">
+                            <span class="text-2xl"><i data-lucide="code"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Website Development</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Custom-coded websites and premium landing pages tailored for elegant performance, speed, and
+                        visual experience.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Responsive Multi-Page Design</li>
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>SEO
+                            Optimization & Speed</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Advanced CMS Integration</li>
+                    </ul>
+                </div>
+
+                <!-- Google Ads Marketing -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/search" target="_blank">
+                            <span class="text-2xl"><i data-lucide="search"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Google Ads Marketing</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Targeted Google Ad campaigns that maximize ROI through keyword strategy, bidding optimization,
+                        and market analytics.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Keyword & Competitor Research
+                        </li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Conversion-Optimized Ad Creatives
+                        </li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Analytics & Performance Reports
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content Creation -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/pen-tool" target="_blank">
+                            <span class="text-2xl"><i data-lucide="pen-tool"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Content creation</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Engaging photo, video, and copy content crafted to captivate audiences and reflect premium brand
+                        aesthetics.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Reel
+                            & Short Video Production</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Branded Product Photography</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>High-Converting Copywriting</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Management -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/share-2" target="_blank">
+                            <span class="text-2xl"><i data-lucide="share-2"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Social Media Management</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Strategic management of your brand’s social media presence to increase reach, engagement, and
+                        brand consistency.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Post
+                            Scheduling & Automation</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Creative Content Calendar</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Growth Analytics & Engagement
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Meta Ads Marketing -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/megaphone" target="_blank">
+                            <span class="text-2xl"><i data-lucide="megaphone"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Meta Ads Marketing</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        High-converting Meta (Facebook & Instagram) ad strategies to drive awareness, engagement, and
+                        upscale conversions.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Pixel
+                            & Audience Setup</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Retargeting & Funnel Strategy
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Ad
+                            Creative Design & A/B Testing</li>
+                    </ul>
+                </div>
+
+                <!-- Branding -->
+                <div class="service-card p-6 sm:p-8 rounded-2xl">
+                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <a href="https://lucide.dev/icons/badge" target="_blank">
+                            <span class="text-2xl"><i data-lucide="badge"></i></span>
+                        </a>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Branding</h3>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        End-to-end branding from logo design to brand voice, creating a strong identity that resonates
+                        with premium audiences.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-gray-300 space-y-3">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Luxury Logo & Typography</li>
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Color
+                            Palette & Moodboards</li>
+                        <li class="flex items-center"><span class="w-2 h-2 gold-gradient rounded-full mr-3"></span>Brand
+                            Voice & Visual Language</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Professional Portfolio Section with Fixed Sizing -->
+
+    <section id="portfolio" class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-transparent to-gray-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Featured Reels &
+                    Content</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Explore our portfolio of viral reels, social media content, and brand storytelling that captivates
+                    audiences
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="brand">Brand Stories</button>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- Reel 1 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/Car detailing shoot.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/Car showroom.png" alt="Car Detailing Shoot" class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">Car Detailing Shoot</h3>
+                            <p class="reel-description">A showcase of premium car detailing services, capturing every
+                                meticulous detail.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="heart" style="color: #ff6b6b;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-circle" style="color: #4ecdc4;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="share" style="color: #45b7d1;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 2 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/Clothing brand.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/Clothing brand.png" alt="Clothing Brand Campaign" class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">Clothing Brand Campaign</h3>
+                            <p class="reel-description">Behind the scenes of a popular clothing brand's latest
+                                collection launch.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="thumbs-up" style="color: #96ceb4;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-square" style="color: #feca57;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="forward" style="color: #ff9ff3;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 3 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/motion graphics product ad.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/motion graphics product ad.png" alt="Motion Graphics Product Ad"
+                        class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">Motion Graphics Product Ad</h3>
+                            <p class="reel-description">An animated product ad showcasing a cutting-edge gadget in
+                                action.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="heart" style="color: #fd79a8;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-circle" style="color: #6c5ce7;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="bookmark" style="color: #a29bfe;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 4 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/Restaurant and bar.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/Restaurant.png" alt="Restaurant and Bar Showcase" class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">Restaurant and Bar Showcase</h3>
+                            <p class="reel-description">A visual journey of a trendy restaurant and bar, highlighting
+                                its ambiance and cuisine.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="heart" style="color: #fd79a8;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-circle" style="color: #6c5ce7;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="bookmark" style="color: #a29bfe;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 5 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/UGC product ad.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/UGC product ad.png" alt="UGC Product Ad" class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">UGC Product Ad</h3>
+                            <p class="reel-description">User-generated content showcasing a popular product in
+                                real-world scenarios.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="heart" style="color: #fd79a8;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-circle" style="color: #6c5ce7;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="bookmark" style="color: #a29bfe;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 6 -->
+                <div class="reel-container" data-category="brand" data-video-src="videos/Property shoot.mp4"
+                    onclick="openVideoModal(this)">
+                    <img src="thumbnails/Property shoot.png" alt="Property Shoot for Real Estate"
+                        class="reel-thumbnail" />
+                    <div class="reel-overlay">
+                        <div class="reel-play-button"></div>
+                        <div class="reel-info">
+                            <h3 class="reel-title">Property Shoot for Real Estate</h3>
+                            <p class="reel-description">A cinematic property shoot for luxury real estate, highlighting
+                                its features and appeal.</p>
+                            <div class="reel-stats">
+                                <div class="reel-stat"><i data-lucide="heart" style="color: #fd79a8;"></i></div>
+                                <div class="reel-stat"><i data-lucide="message-circle" style="color: #6c5ce7;"></i>
+                                </div>
+                                <div class="reel-stat"><i data-lucide="bookmark" style="color: #a29bfe;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="text-center mt-12">
+                <button class="glass-effect px-8 py-4 rounded-full text-white font-semibold hover-glow">
+                    View All Content
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Your Experience, Our Pride Section -->
+
+    <section id="review" class="py-16 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left Side - Text Content -->
+                <div class="lg:pr-8">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                        Your <span class="gradient-text">Experience</span>,<br>
+                        Our <span class="gradient-text">Pride</span>
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                        Hear from our growing base of clients who have trusted Allure Marketing to fuel their startup
+                        growth.
+                    </p>
+                </div>
+
+                <!-- Right Side - Moving Testimonials -->
+                <div class="testimonials-container">
+                    <!-- First Row - Moving Left -->
+                    <div class="testimonial-row testimonial-row-left">
+                        <div class="testimonial-track">
+                            <!-- Cards -->
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">RJ</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Ritika Jain</h4>
+                                        <p class="testimonial-role">E-commerce Owner</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Allure’s branding helped us set a professional tone for our
+                                    business and attract new customers.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">AK</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Aniket Khurana</h4>
+                                        <p class="testimonial-role">Freelancer</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Their Google Ads campaigns helped me target the right
+                                    audience and scale my freelance business.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">MP</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Maya Patel</h4>
+                                        <p class="testimonial-role">Boutique Owner</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">They built a beautiful website for our boutique. Our online
+                                    orders increased significantly!</p>
+                            </div>
+
+                            <!-- Duplicates for seamless loop -->
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">RJ</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Ritika Jain</h4>
+                                        <p class="testimonial-role">E-commerce Owner</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Allure’s branding helped us set a professional tone for our
+                                    business and attract new customers.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">AK</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Aniket Khurana</h4>
+                                        <p class="testimonial-role">Freelancer</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Their Google Ads campaigns helped me target the right
+                                    audience and scale my freelance business.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">MP</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Maya Patel</h4>
+                                        <p class="testimonial-role">Boutique Owner</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">They built a beautiful website for our boutique. Our online
+                                    orders increased significantly!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Row - Moving Right -->
+                    <div class="testimonial-row testimonial-row-right">
+                        <div class="testimonial-track">
+                            <!-- Cards -->
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">VT</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Vikram Thakur</h4>
+                                        <p class="testimonial-role">Tech Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Their website development and branding gave my startup the
+                                    edge it needed to stand out in the market.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">NS</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Neha Sharma</h4>
+                                        <p class="testimonial-role">Content Creator</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">The team worked on my social media campaigns, and I saw a
+                                    huge engagement boost.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">RB</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Rohan Bansal</h4>
+                                        <p class="testimonial-role">Real Estate Agent</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">I highly recommend Allure for new businesses. Their
+                                    strategies helped increase my local reach.</p>
+                            </div>
+
+                            <!-- Duplicates for seamless loop -->
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">VT</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Vikram Thakur</h4>
+                                        <p class="testimonial-role">Tech Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">Their website development and branding gave my startup the
+                                    edge it needed to stand out in the market.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">NS</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Neha Sharma</h4>
+                                        <p class="testimonial-role">Content Creator</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">The team worked on my social media campaigns, and I saw a
+                                    huge engagement boost.</p>
+                            </div>
+
+                            <div class="testimonial-card-new glass-effect">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar"
+                                        style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">RB</div>
+                                    <div>
+                                        <h4 class="testimonial-name">Rohan Bansal</h4>
+                                        <p class="testimonial-role">Real Estate Agent</p>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">I highly recommend Allure for new businesses. Their
+                                    strategies helped increase my local reach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Enhanced Contact Section -->
+    <!-- Add this Lucide CDN link in your <head> -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <section id="contact" class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-transparent to-gray-900/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Let's Create
+                    Excellence</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Ready to elevate your brand to luxury status? Let's connect and build something extraordinary
+                    together.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <!-- WhatsApp CTA Box -->
+                <div class="glass-effect p-6 sm:p-8 rounded-2xl flex flex-col justify-center items-center text-center">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Start Your Project Instantly</h3>
+                    <p class="text-gray-400 mb-6">
+                        Skip the form — message us directly to discuss your vision. Let’s make your brand iconic.
+                    </p>
+                    <a href="https://wa.me/919548190688" target="_blank"
+                        class="flex items-center gap-2 bg-green-500 text-white font-semibold text-lg px-6 py-4 rounded-lg hover:bg-green-600 transition-all duration-300">
+                        <i data-lucide="message-circle" style="color: white;"></i>
+                        Message Us on WhatsApp
+                    </a>
+                </div>
+
+
+                <!-- Contact & Social -->
+                <div class="space-y-8">
+                    <div class="glass-effect p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-6">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i data-lucide="mail" class="w-6 h-6 mr-4 mt-1 text-white"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-400">alluremarketing24@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="phone" class="w-6 h-6 mr-4 mt-1 text-white"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <p class="text-gray-400 text-sm">+919548190688 (WhatsApp)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links
+                    <div class="glass-effect p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold mb-4">Follow Our Work</h3>
+                        <div class="flex space-x-6 items-center text-white">
+                            <a href="https://linkedin.com/company/alluremarketing" target="_blank">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://instagram.com/alluremarketing" target="_blank">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://twitter.com/alluremkt" target="_blank">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://behance.net/alluremarketing" target="_blank">
+                                <i data-lucide="palette" class="w-5 h-5"></i> <!-- Behance alt icon -->
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+
+
+
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="py-8 sm:py-12 px-4 sm:px-6 bg-black/50 mt-16 sm:mt-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-2">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="logo-container">
+                        <img src="logo.jpeg" alt="Allure Marketing Logo">
+                    </div>
+                    <div>
+                        <div class="text-lg font-bold gradient-text">ALLURE</div>
+                        <div class="text-xs text-gray-400 -mt-1">MARKETING</div>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Allure Marketing crafts premium content, high-ROI Meta ads, and strategic influencer campaigns to drive real growth.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Website Development</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Google Ads Marketing</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Content creation</a></li>
+                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Branding</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#review" class="hover:text-yellow-400 transition-colors">About Us</a></li>
+                    <li><a href="#portfolio" class="hover:text-yellow-400 transition-colors">Our Work</a></li>
+                    <li><a href="#review" class="hover:text-yellow-400 transition-colors">Experience</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-sm text-gray-500">
+                © 2025 Allure Marketing.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Enhanced Universal Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" onclick="closeVideoModal()">×</button>
+            <iframe id="videoFrame" src="/placeholder.svg" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+            <video id="localVideoFrame" controls preload="metadata" style="display: none;">
+                <source id="videoSource1" src="/placeholder.svg" type="">
+                <source id="videoSource2" src="/placeholder.svg" type="">
+                <source id="videoSource3" src="/placeholder.svg" type="">
+                Your browser does not support the video tag.
+            </video>
+            <div id="videoError" class="video-error" style="display: none;">
+                <i data-lucide="video-off"></i>
+                <p>Unable to load video</p>
+                <small>Please check the video format or try a different file</small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // // Enhanced Local Video Thumbnail Generation for All Formats
+        // function generateLocalVideoThumbnail(container, videoSrc) {
+        //     const video = document.getElementById('thumbnailGenerator');
+        //     const canvas = document.getElementById('thumbnailCanvas');
+        //     const ctx = canvas.getContext('2d');
+        //     const loadingElement = container.querySelector('.thumbnail-loading');
+
+        //     // Clear previous video
+        //     video.src = '';
+        //     video.load();
+
+        //     // Set up video source
+        //     video.src = videoSrc;
+        //     video.currentTime = 1; // Capture frame at 1 second
+
+        //     // Handle different video formats
+        //     video.addEventListener('loadeddata', function () {
+        //         try {
+        //             canvas.width = video.videoWidth || 360;
+        //             canvas.height = video.videoHeight || 640;
+
+        //             // Ensure we have valid dimensions
+        //             if (canvas.width === 0 || canvas.height === 0) {
+        //                 canvas.width = 360;
+        //                 canvas.height = 640;
+        //             }
+
+        //             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        //             // Convert canvas to image
+        //             const thumbnailDataUrl = canvas.toDataURL('image/jpeg', 0.8);
+
+        //             // Create and insert the thumbnail
+        //             const thumbnailImg = document.createElement('img');
+        //             thumbnailImg.src = thumbnailDataUrl;
+        //             thumbnailImg.alt = container.querySelector('.reel-title').textContent;
+        //             thumbnailImg.className = 'reel-thumbnail';
+
+        //             // Remove loading state and add thumbnail
+        //             if (loadingElement) {
+        //                 loadingElement.remove();
+        //             }
+
+        //             container.insertBefore(thumbnailImg, container.firstChild);
+        //         } catch (error) {
+        //             console.error('Error generating thumbnail:', error);
+        //             showThumbnailError(loadingElement);
+        //         }
+        //     }, { once: true });
+
+        //     video.addEventListener('error', function (e) {
+        //         console.error('Video loading error:', e);
+        //         showThumbnailError(loadingElement);
+        //     }, { once: true });
+
+        //     // Fallback timeout
+        //     setTimeout(() => {
+        //         if (loadingElement && loadingElement.parentNode) {
+        //             showThumbnailError(loadingElement);
+        //         }
+        //     }, 10000); // 10 second timeout
+        // }
+
+        // function showThumbnailError(loadingElement) {
+        //     if (loadingElement) {
+        //         loadingElement.innerHTML = '<i data-lucide="video-off"></i><br>Thumbnail<br>Unavailable';
+        //         loadingElement.className = 'thumbnail-error';
+        //         lucide.createIcons();
+        //     }
+        // }
+
+        // // YouTube Thumbnail Auto-Fetch Function
+        // function loadYouTubeThumbnail(container) {
+        //     const videoId = container.getAttribute('data-video-id');
+        //     const loadingElement = container.querySelector('.thumbnail-loading');
+
+        //     if (!videoId) return;
+
+        //     // Try different thumbnail qualities in order of preference
+        //     const thumbnailQualities = [
+        //         'maxresdefault', // Highest quality
+        //         'hqdefault',     // High quality
+        //         'mqdefault',     // Medium quality
+        //         'sddefault'      // Standard quality
+        //     ];
+
+        //     let currentQualityIndex = 0;
+
+        //     function tryLoadThumbnail() {
+        //         const quality = thumbnailQualities[currentQualityIndex];
+        //         const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
+
+        //         const img = new Image();
+        //         img.crossOrigin = 'anonymous';
+
+        //         img.onload = function () {
+        //             // Check if image is valid (YouTube returns a default image for invalid videos)
+        //             if (this.naturalWidth > 120 && this.naturalHeight > 90) {
+        //                 // Create and insert the thumbnail
+        //                 const thumbnailImg = document.createElement('img');
+        //                 thumbnailImg.src = thumbnailUrl;
+        //                 thumbnailImg.alt = container.querySelector('.reel-title').textContent;
+        //                 thumbnailImg.className = 'reel-thumbnail';
+
+        //                 // Remove loading state and add thumbnail
+        //                 if (loadingElement) {
+        //                     loadingElement.remove();
+        //                 }
+
+        //                 container.insertBefore(thumbnailImg, container.firstChild);
+        //             } else {
+        //                 tryNextQuality();
+        //             }
+        //         };
+
+        //         img.onerror = function () {
+        //             tryNextQuality();
+        //         };
+
+        //         img.src = thumbnailUrl;
+        //     }
+
+        //     function tryNextQuality() {
+        //         currentQualityIndex++;
+        //         if (currentQualityIndex < thumbnailQualities.length) {
+        //             tryLoadThumbnail();
+        //         } else {
+        //             // All qualities failed, show error state
+        //             if (loadingElement) {
+        //                 loadingElement.innerHTML = '<i data-lucide="video-off"></i><br>Thumbnail<br>Unavailable';
+        //                 loadingElement.className = 'thumbnail-error';
+        //                 lucide.createIcons();
+        //             }
+        //         }
+        //     }
+
+        //     tryLoadThumbnail();
+        // }
+
+        // Load thumbnails for all reel containers on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const reelContainers = document.querySelectorAll('.reel-container');
+            reelContainers.forEach((container, index) => {
+                // Add a small delay to stagger the requests
+                setTimeout(() => {
+                    const videoId = container.getAttribute('data-video-id');
+                    const videoSrc = container.getAttribute('data-video-src');
+
+                    if (videoId) {
+                        loadYouTubeThumbnail(container);
+                    } else if (videoSrc) {
+                        generateLocalVideoThumbnail(container, videoSrc);
+                    }
+                }, index * 200);
+            });
+        });
+
+        // Fixed Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (menu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Enhanced Video Modal Functions with Universal Format Support
+        function openVideoModal(element) {
+            const videoId = element.getAttribute('data-video-id');
+            const videoSrc = element.getAttribute('data-video-src');
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            const localVideo = document.getElementById('localVideoFrame');
+            const videoError = document.getElementById('videoError');
+
+            // Show modal with smooth animation
+            modal.classList.add('active');
+
+            // Hide all elements initially
+            iframe.style.display = 'none';
+            localVideo.style.display = 'none';
+            videoError.style.display = 'none';
+
+            if (videoId) {
+                // YouTube video
+                iframe.style.display = 'block';
+
+                const youtubeUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=1&cc_load_policy=0&playsinline=1&enablejsapi=1&controls=1`;
+
+                setTimeout(() => {
+                    iframe.src = youtubeUrl;
+                }, 200);
+            } else if (videoSrc) {
+                // Local video with universal format support
+                localVideo.style.display = 'block';
+
+                setTimeout(() => {
+                    setupLocalVideo(videoSrc, localVideo, videoError);
+                }, 200);
+            }
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function setupLocalVideo(videoSrc, videoElement, errorElement) {
+            // Clear previous sources
+            const sources = videoElement.querySelectorAll('source');
+            sources.forEach(source => {
+                source.src = '';
+                source.type = '';
+            });
+
+            // Detect video format and set up sources
+            const videoFormats = detectVideoFormat(videoSrc);
+
+            if (videoFormats.length === 0) {
+                showVideoError(errorElement, videoElement);
+                return;
+            }
+
+            // Set up multiple sources for better compatibility
+            videoFormats.forEach((format, index) => {
+                if (sources[index]) {
+                    sources[index].src = format.src;
+                    sources[index].type = format.type;
+                }
+            });
+
+            // Set up error handling
+            videoElement.addEventListener('error', function () {
+                showVideoError(errorElement, videoElement);
+            }, { once: true });
+
+            videoElement.addEventListener('loadeddata', function () {
+                errorElement.style.display = 'none';
+            }, { once: true });
+
+            // Load and play the video
+            videoElement.load();
+
+            // Attempt to play after a short delay
+            setTimeout(() => {
+                const playPromise = videoElement.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log('Auto-play prevented:', error);
+                        // Auto-play was prevented, but video is still loaded
+                    });
+                }
+            }, 300);
+        }
+
+        function detectVideoFormat(videoSrc) {
+            const formats = [];
+            const extension = videoSrc.split('.').pop().toLowerCase();
+
+            // Map of video extensions to MIME types
+            const videoMimeTypes = {
+                // MP4 formats
+                'mp4': 'video/mp4',
+                'm4v': 'video/mp4',
+
+                // WebM formats
+                'webm': 'video/webm',
+
+                // OGG formats
+                'ogv': 'video/ogg',
+                'ogg': 'video/ogg',
+
+                // MOV formats
+                'mov': 'video/quicktime',
+                'qt': 'video/quicktime',
+
+                // AVI formats
+                'avi': 'video/x-msvideo',
+
+                // WMV formats
+                'wmv': 'video/x-ms-wmv',
+
+                // FLV formats
+                'flv': 'video/x-flv',
+
+                // MKV formats
+                'mkv': 'video/x-matroska',
+
+                // 3GP formats
+                '3gp': 'video/3gpp',
+                '3g2': 'video/3gpp2',
+
+                // ASF formats
+                'asf': 'video/x-ms-asf',
+
+                // RM formats
+                'rm': 'video/vnd.rn-realvideo',
+                'rmvb': 'video/vnd.rn-realvideo'
+            };
+
+            const mimeType = videoMimeTypes[extension];
+
+            if (mimeType) {
+                formats.push({
+                    src: videoSrc,
+                    type: mimeType
+                });
+
+                // Add codec-specific variants for better compatibility
+                if (extension === 'mp4') {
+                    formats.push({
+                        src: videoSrc,
+                        type: 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                    });
+                } else if (extension === 'webm') {
+                    formats.push({
+                        src: videoSrc,
+                        type: 'video/webm; codecs="vp8, vorbis"'
+                    });
+                    formats.push({
+                        src: videoSrc,
+                        type: 'video/webm; codecs="vp9, opus"'
+                    });
+                }
+            }
+
+            return formats;
+        }
+
+        function showVideoError(errorElement, videoElement) {
+            videoElement.style.display = 'none';
+            errorElement.style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoFrame');
+            const localVideo = document.getElementById('localVideoFrame');
+            const videoError = document.getElementById('videoError');
+
+            // Hide modal with animation
+            modal.classList.remove('active');
+
+            // Stop and clear all video sources
+            setTimeout(() => {
+                // Clear iframe
+                iframe.src = '';
+
+                // Stop and clear local video
+                localVideo.pause();
+                localVideo.currentTime = 0;
+                const sources = localVideo.querySelectorAll('source');
+                sources.forEach(source => {
+                    source.src = '';
+                });
+                localVideo.load();
+
+                // Hide error state
+                videoError.style.display = 'none';
+
+                // Reset display states
+                iframe.style.display = 'none';
+                localVideo.style.display = 'none';
+            }, 300);
+
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Portfolio Category Filter with Consistent Sizing
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const category = this.getAttribute('data-category');
+                const reelContainers = document.querySelectorAll('.reel-container');
+
+                reelContainers.forEach(container => {
+                    if (category === 'all' || container.getAttribute('data-category') === category) {
+                        container.style.display = 'block';
+                        container.style.opacity = '0';
+                        container.style.transform = 'scale(0.8)';
+
+                        setTimeout(() => {
+                            container.style.opacity = '1';
+                            container.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        container.style.opacity = '0';
+                        container.style.transform = 'scale(0.8)';
+
+                        setTimeout(() => {
+                            container.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('videoModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+
+                // Also close mobile menu if open
+                const menu = document.getElementById('mobileMenu');
+                const hamburger = document.getElementById('hamburger');
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Enhanced smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced form submission
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Add loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you for your interest! We will contact you within 24 hours to discuss your premium project.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+            }, 2000);
+        });
+
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.premium-card, .service-card, .testimonial-card, .reel-container').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Enhanced loading animation
+        window.addEventListener('load', function () {
+            document.body.style.opacity = '1';
+        });
+
+        // Preload critical images
+        const criticalImages = [
+            'WhatsApp Image 2025-07-27 at 19.26.00.jpeg'
+        ];
+
+        criticalImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Reel hover effects
+        document.querySelectorAll('.reel-container').forEach(container => {
+            container.addEventListener('mouseenter', function () {
+                const playButton = this.querySelector('.reel-play-button');
+                if (playButton) {
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                }
+            });
+
+            container.addEventListener('mouseleave', function () {
+                const playButton = this.querySelector('.reel-play-button');
+                if (playButton) {
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
