@@ -5,1349 +5,1439 @@
 
 
 <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Allure Marketing offers premium branding, design, and marketing solutions that drive business growth. Contact us to take your brand to the next level." />
+    <meta name="keywords"
+        content="branding, marketing, design, premium content, influencer marketing, social media marketing, advertising agency" />
+    <meta name="author" content="Allure Marketing" />
+
+    <!-- Open Graph Meta Tags for better social media sharing -->
+    <meta property="og:title" content="Allure Marketing - Premium Branding & Design" />
+    <meta property="og:description"
+        content="Allure Marketing provides premium branding, design, and influencer marketing services to take your business to the next level." />
+    <meta property="og:image" content="https://alluremarketing.in/images/og-image.png" />
+    <meta property="og:url" content="https://alluremarketing.in" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Allure Marketing - Premium Branding & Design" />
+    <meta name="twitter:description"
+        content="Premium branding, design, and marketing services to grow your business and reach your audience." />
+    <meta name="twitter:image" content="https://alluremarketing.in/images/twitter-card-image.png" />
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="https://alluremarketing.in/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://alluremarketing.in/images/apple-touch-icon.png" />
+    <link rel="icon" sizes="192x192" href="https://alluremarketing.in/images/icon-192x192.png" />
 
     <title>Allure Marketing - Premium Branding & Design</title>
 
+    <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
-
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
+    <!-- Google Fonts (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- Google Analytics (Optional, for tracking) -->
+    <!-- Add your Google Analytics tracking code here if you have one -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+
     <style>
+        /* Your custom styles here */
         .testimonial-card {
-
             width: 280px;
-
         }
 
         html {
-
             scroll-behavior: smooth;
-
         }
 
         body {
-
             margin: 0;
-
             font-family: 'Inter', system-ui, sans-serif;
-
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
-
             color: #f0f0f0;
-
             overflow-x: hidden;
-
         }
 
         .gradient-text {
-
             background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
-
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
-
             background-clip: text;
-
         }
 
         .glass-effect {
-
             background: rgba(0, 0, 0, 0.4);
-
             backdrop-filter: blur(15px);
-
             border: 1px solid rgba(212, 175, 55, 0.2);
-
         }
 
         .premium-card {
-
             background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-
             border: 1px solid rgba(212, 175, 55, 0.3);
-
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
         }
 
         .premium-card:hover {
-
             transform: translateY(-8px);
-
             border-color: rgba(212, 175, 55, 0.6);
-
             box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-
         }
 
         .hover-glow:hover {
-
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
-
             transform: translateY(-3px);
-
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
         }
 
         .gold-gradient {
-
             background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
-
-        }
-
-        /* Enhanced Logo Styling */
-
-        .logo-container {
-
-            position: relative;
-
-            width: 48px;
-
-            height: 48px;
-
-            border-radius: 12px;
-
-            overflow: hidden;
-
-            border: 2px solid rgba(212, 175, 55, 0.3);
-
-            transition: all 0.3s ease;
-
-        }
-
-        .logo-container:hover {
-
-            border-color: rgba(212, 175, 55, 0.8);
-
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-
-        }
-
-        .logo-container img {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            border-radius: 10px;
-
-        }
-
-        /* Fixed Mobile Menu */
-
-        .mobile-menu {
-
-            transform: translateY(-100%);
-
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-            background: rgba(0, 0, 0, 0.98);
-
-            backdrop-filter: blur(20px);
-
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-
-        }
-
-        .mobile-menu.active {
-
-            transform: translateY(0);
-
-        }
-
-        .hamburger {
-
-            width: 28px;
-
-            height: 28px;
-
-            position: relative;
-
-            cursor: pointer;
-
-            z-index: 1001;
-
-        }
-
-        .hamburger span {
-
-            display: block;
-
-            position: absolute;
-
-            height: 3px;
-
-            width: 100%;
-
-            background: #fff;
-
-            border-radius: 2px;
-
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-            left: 0;
-
-        }
-
-        .hamburger span:nth-child(1) {
-
-            top: 0;
-
-        }
-
-        .hamburger span:nth-child(2) {
-
-            top: 50%;
-
-            transform: translateY(-50%);
-
-        }
-
-        .hamburger span:nth-child(3) {
-
-            bottom: 0;
-
-        }
-
-        .hamburger.active span:nth-child(1) {
-
-            top: 50%;
-
-            transform: translateY(-50%) rotate(45deg);
-
-        }
-
-        .hamburger.active span:nth-child(2) {
-
-            opacity: 0;
-
-            transform: translateX(20px);
-
-        }
-
-        .hamburger.active span:nth-child(3) {
-
-            bottom: 50%;
-
-            transform: translateY(50%) rotate(-45deg);
-
-        }
-
-        /* Floating Animation */
-
-        @keyframes float {
-
-            0%,
-
-            100% {
-
-                transform: translateY(0px);
-
-            }
-
-            50% {
-
-                transform: translateY(-20px);
-
-            }
-
-        }
-
-        .floating {
-
-            animation: float 6s ease-in-out infinite;
-
-        }
-
-        /* Enhanced Service Cards */
-
-        .service-card {
-
-            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-
-            border: 1px solid rgba(212, 175, 55, 0.2);
-
-            /* transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
-
-            position: relative;
-
-            overflow: hidden;
-
-        }
-
-        .service-card::before {
-
-            /* content: ''; */
-
-            position: absolute;
-
-            top: 0;
-
-            /* left: -100%; */
-
-            width: 100%;
-
-            height: 100%;
-
-            /* background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent); */
-
-            /* transition: left 0.5s ease; */
-
-        }
-
-        /* .service-card:hover::before {
-
-            left: 100%;
-
-        } */
-
-        .service-card:hover {
-
-            /* transform: translateY(-12px) scale(1.02); */
-
-            border-color: rgba(212, 175, 55, 0.6);
-
-            /* box-shadow: 0 25px 80px rgba(212, 175, 55, 0.25); */
-
-        }
-
-        .service-icon {
-
-            background: linear-gradient(135deg, #d4af37, #311414);
-
-            transition: all 0.3s ease;
-
-        }
-
-        .service-card:hover .service-icon {
-
-            transform: scale(1.1) rotate(5deg);
-
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-
-        }
-
-        /* Professional Portfolio Grid - Fixed Sizing */
-
-        .portfolio-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-            gap: 24px;
-
-            max-width: 1400px;
-
-            margin: 0 auto;
-
-        }
-
-        .reel-container {
-
-            position: relative;
-
-            aspect-ratio: 9/16;
-
-            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            cursor: pointer;
-
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-            border: 2px solid rgba(212, 175, 55, 0.2);
-
-            width: 100%;
-
-            max-width: 300px;
-
-            margin: 0 auto;
-
-        }
-
-        .reel-container:hover {
-
-            /* transform: scale(1.05); */
-
-            border-color: rgba(212, 175, 55, 0.6);
-
-            /* box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3); */
-
-        }
-
-        .reel-thumbnail {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: transform 0.4s ease;
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-        }
-
-        .reel-container:hover .reel-thumbnail {
-
-            /* transform: scale(1.1); */
-
-        }
-
-        /* Local Video Thumbnail Generation */
-
-        .video-thumbnail-generator {
-
-            display: none;
-
-        }
-
-        /* Thumbnail Loading States */
-
-        .thumbnail-loading {
-
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            color: rgba(212, 175, 55, 0.8);
-
-            font-size: 14px;
-
-            z-index: 1;
-
-            text-align: center;
-
-        }
-
-        .thumbnail-error {
-
-            position: absolute;
-
-            inset: 0;
-
-            background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: rgba(212, 175, 55, 0.6);
-
-            font-size: 12px;
-
-            text-align: center;
-
-            padding: 20px;
-
-        }
-
-        @keyframes shimmer {
-
-            0% {
-
-                opacity: 0.6;
-
-            }
-
-            50% {
-
-                opacity: 1;
-
-            }
-
-            100% {
-
-                opacity: 0.6;
-
-            }
-
-        }
-
-        .thumbnail-loading {
-
-            animation: shimmer 1.5s ease-in-out infinite;
-
-        }
-
-        .reel-overlay {
-
-            position: absolute;
-
-            inset: 0;
-
-            background: linear-gradient(to bottom,
-
-                    transparent 0%,
-
-                    transparent 60%,
-
-                    rgba(0, 0, 0, 0.8) 100%);
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-            padding: 20px;
-
-            z-index: 2;
-
-        }
-
-        .reel-play-button {
-
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            width: 80px;
-
-            height: 80px;
-
-            background: rgba(212, 175, 55, 0.9);
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-            backdrop-filter: blur(10px);
-
-            opacity: 0;
-
-            z-index: 3;
-
-        }
-
-        .reel-container:hover .reel-play-button {
-
-            opacity: 1;
-
-            transform: translate(-50%, -50%) scale(1.1);
-
-        }
-
-        .reel-play-button::after {
-
-            content: '';
-
-            width: 0;
-
-            height: 0;
-
-            border-left: 16px solid #000;
-
-            border-top: 12px solid transparent;
-
-            border-bottom: 12px solid transparent;
-
-            margin-left: 4px;
-
-        }
-
-        .reel-info {
-
-            margin-top: auto;
-
-            z-index: 2;
-
-        }
-
-        .reel-title {
-
-            font-size: 16px;
-
-            font-weight: 700;
-
-            color: white;
-
-            margin-bottom: 8px;
-
-            line-height: 1.2;
-
-        }
-
-        .reel-description {
-
-            font-size: 14px;
-
-            color: rgba(255, 255, 255, 0.8);
-
-            margin-bottom: 12px;
-
-            line-height: 1.3;
-
-        }
-
-        /* Minimal Social Stats with Lucide Icons */
-
-        .reel-stats {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 16px;
-
-            font-size: 12px;
-
-            color: rgba(255, 255, 255, 0.7);
-
-        }
-
-        .reel-stat {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 6px;
-
-        }
-
-        .reel-stat svg {
-
-            width: 14px;
-
-            height: 14px;
-
-            stroke: currentColor;
-
-        }
-
-        .category-filter {
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 12px;
-
-            margin-bottom: 40px;
-
-            flex-wrap: wrap;
-
-        }
-
-        .filter-btn {
-
-            padding: 10px 20px;
-
-            background: rgba(212, 175, 55, 0.1);
-
-            border: 1px solid rgba(212, 175, 55, 0.3);
-
-            border-radius: 25px;
-
-            color: rgba(212, 175, 55, 0.8);
-
-            font-size: 14px;
-
-            font-weight: 500;
-
-            cursor: pointer;
-
-            transition: all 0.3s ease;
-
-        }
-
-        .filter-btn:hover,
-
-        .filter-btn.active {
-
-            background: rgba(212, 175, 55, 0.2);
-
-            border-color: rgba(212, 175, 55, 0.8);
-
-            color: #ffd700;
-
-            transform: translateY(-2px);
-
-        }
-
-        /* New Testimonials Section - Your Experience, Our Pride */
-
-        .testimonials-container {
-
-            position: relative;
-
-            height: 400px;
-
-            overflow: hidden;
-
-            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-
-            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-
-        }
-
-        .testimonial-row {
-
-            position: absolute;
-
-            display: flex;
-
-            width: 100%;
-
-            height: 180px;
-
-            overflow: hidden;
-
-        }
-
-        .testimonial-row-left {
-
-            top: 0;
-
-        }
-
-        .testimonial-row-right {
-
-            top: 200px;
-
-        }
-
-        .testimonial-track {
-
-            display: flex;
-
-            gap: 20px;
-
-            animation-duration: 40s;
-
-            animation-timing-function: linear;
-
-            animation-iteration-count: infinite;
-
-            will-change: transform;
-
-        }
-
-        .testimonial-row-left .testimonial-track {
-
-            animation-name: slideLeft;
-
-        }
-
-        .testimonial-row-right .testimonial-track {
-
-            animation-name: slideRight;
-
-        }
-
-        /* Pause animation on hover */
-
-        .testimonial-row:hover .testimonial-track {
-
-            animation-play-state: paused;
-
-        }
-
-        @keyframes slideLeft {
-
-            0% {
-
-                transform: translateX(0);
-
-            }
-
-            100% {
-
-                transform: translateX(-50%);
-
-            }
-
-        }
-
-        @keyframes slideRight {
-
-            0% {
-
-                transform: translateX(-50%);
-
-            }
-
-            100% {
-
-                transform: translateX(0);
-
-            }
-
-        }
-
-        .testimonial-card-new {
-
-            flex-shrink: 0;
-
-            width: 320px;
-
-            padding: 24px;
-
-            border-radius: 20px;
-
-            background: rgba(0, 0, 0, 0.4);
-
-            backdrop-filter: blur(15px);
-
-            border: 1px solid rgba(212, 175, 55, 0.2);
-
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-            cursor: pointer;
-
-        }
-
-        .testimonial-card-new:hover {
-
-            /* transform: translateY(-8px); */
-
-            border-color: rgba(212, 175, 55, 0.6);
-
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-
-        }
-
-        .testimonial-header {
-
-            display: flex;
-
-            align-items: center;
-
-            margin-bottom: 16px;
-
-        }
-
-        .testimonial-avatar {
-
-            width: 48px;
-
-            height: 48px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-weight: bold;
-
-            font-size: 16px;
-
-            color: white;
-
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-
-            margin-right: 12px;
-
-            flex-shrink: 0;
-
-        }
-
-        .testimonial-name {
-
-            font-size: 16px;
-
-            font-weight: 600;
-
-            color: white;
-
-            margin: 0;
-
-        }
-
-        .testimonial-role {
-
-            font-size: 14px;
-
-            color: rgba(212, 175, 55, 0.8);
-
-            margin: 2px 0 0 0;
-
-        }
-
-        .testimonial-text {
-
-            font-size: 14px;
-
-            line-height: 1.5;
-
-            color: rgba(255, 255, 255, 0.8);
-
-            margin: 0;
-
-        }
-
-        /* Enhanced Video Modal for Reels */
-
-        .video-modal {
-
-            position: fixed;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 100%;
-
-            background: rgba(0, 0, 0, 0.95);
-
-            backdrop-filter: blur(15px);
-
-            z-index: 9999;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-        }
-
-        .video-modal.active {
-
-            opacity: 1;
-
-            visibility: visible;
-
-        }
-
-        .video-modal-content {
-
-            position: relative;
-
-            width: 90%;
-
-            max-width: 400px;
-
-            aspect-ratio: 9/16;
-
-            background: #000;
-
-            border-radius: 24px;
-
-            overflow: hidden;
-
-            box-shadow: 0 30px 80px rgba(212, 175, 55, 0.4);
-
-            border: 3px solid rgba(212, 175, 55, 0.4);
-
-            transform: scale(0.8) rotateX(10deg);
-
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-        }
-
-        .video-modal.active .video-modal-content {
-
-            transform: scale(1) rotateX(0deg);
-
-        }
-
-        .video-modal iframe,
-
-        .video-modal video {
-
-            width: 100%;
-
-            height: 100%;
-
-            border: none;
-
-        }
-
-        .video-modal-close {
-
-            position: absolute;
-
-            top: -60px;
-
-            right: 0;
-
-            width: 50px;
-
-            height: 50px;
-
-            background: rgba(212, 175, 55, 0.9);
-
-            border: none;
-
-            border-radius: 50%;
-
-            color: #000;
-
-            font-size: 24px;
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-            backdrop-filter: blur(10px);
-
-        }
-
-        .video-modal-close:hover {
-
-            background: rgba(212, 175, 55, 1);
-
-            transform: scale(1.1) rotate(90deg);
-
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-
-        }
-
-        /* Contact Form Enhancements */
-
-        .contact-form input,
-
-        .contact-form textarea,
-
-        .contact-form select {
-
-            background: rgba(255, 255, 255, 0.05);
-
-            border: 1px solid rgba(212, 175, 55, 0.3);
-
-            color: white;
-
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-        }
-
-        .contact-form input:focus,
-
-        .contact-form textarea:focus,
-
-        .contact-form select:focus {
-
-            outline: none;
-
-            border-color: rgba(212, 175, 55, 0.8);
-
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-
-            transform: translateY(-2px);
-
-        }
-
-        /* Responsive Improvements */
-
-        @media (max-width: 1024px) {
-
-            .testimonials-container {
-
-                height: 350px;
-
-            }
-
-
-
-            .testimonial-card-new {
-
-                width: 280px;
-
-                padding: 20px;
-
-            }
-
-
-
-            .testimonial-row {
-
-                height: 160px;
-
-            }
-
-
-
-            .testimonial-row-right {
-
-                top: 180px;
-
-            }
-
-        }
-
-        @media (max-width: 768px) {
-
-            .hero-title {
-
-                font-size: 2.5rem;
-
-                line-height: 1.1;
-
-            }
-
-            .section-title {
-
-                font-size: 2rem;
-
-            }
-
-            .video-modal-content {
-
-                width: 95%;
-
-                max-width: 350px;
-
-                border-radius: 20px;
-
-            }
-
-            .video-modal-close {
-
-                top: -50px;
-
-                right: 10px;
-
-                width: 45px;
-
-                height: 45px;
-
-                font-size: 20px;
-
-            }
-
-            .service-card {
-
-                margin-bottom: 1rem;
-
-            }
-
-            .portfolio-grid {
-
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
-                gap: 16px;
-
-            }
-
-            .reel-container {
-
-                border-radius: 16px;
-
-                max-width: 250px;
-
-            }
-
-            .reel-play-button {
-
-                width: 60px;
-
-                height: 60px;
-
-            }
-
-            .category-filter {
-
-                gap: 8px;
-
-                margin-bottom: 30px;
-
-            }
-
-            .filter-btn {
-
-                padding: 8px 16px;
-
-                font-size: 13px;
-
-            }
-
-            .testimonials-container {
-
-                height: 300px;
-
-            }
-
-
-
-            .testimonial-card-new {
-
-                width: 250px;
-
-                padding: 16px;
-
-            }
-
-
-
-            .testimonial-row {
-
-                height: 140px;
-
-            }
-
-
-
-            .testimonial-row-right {
-
-                top: 160px;
-
-            }
-
-
-
-            .testimonial-name {
-
-                font-size: 14px;
-
-            }
-
-
-
-            .testimonial-role {
-
-                font-size: 12px;
-
-            }
-
-
-
-            .testimonial-text {
-
-                font-size: 13px;
-
-            }
-
-
-
-            .testimonial-avatar {
-
-                width: 40px;
-
-                height: 40px;
-
-                font-size: 14px;
-
-            }
-
-        }
-
-        /* Smooth Page Transitions */
-
-        * {
-
-            transition-property: transform, opacity, background-color, border-color, box-shadow;
-
-            transition-duration: 0.3s;
-
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-        }
-
-        .video-error {
-
-            position: absolute;
-
-            inset: 0;
-
-            background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: rgba(212, 175, 55, 0.6);
-
-            text-align: center;
-
-            padding: 20px;
-
-        }
-
-        .video-error i {
-
-            width: 48px;
-
-            height: 48px;
-
-            margin-bottom: 16px;
-
-            stroke-width: 1.5;
-
-        }
-
-        .video-error p {
-
-            font-size: 16px;
-
-            font-weight: 600;
-
-            margin-bottom: 8px;
-
-        }
-
-        .video-error small {
-
-            font-size: 12px;
-
-            opacity: 0.8;
-
         }
     </style>
 
 </head>
 
+<style>
+    .testimonial-card {
+
+        width: 280px;
+
+    }
+
+    html {
+
+        scroll-behavior: smooth;
+
+    }
+
+    body {
+
+        margin: 0;
+
+        font-family: 'Inter', system-ui, sans-serif;
+
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+
+        color: #f0f0f0;
+
+        overflow-x: hidden;
+
+    }
+
+    .gradient-text {
+
+        background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+        background-clip: text;
+
+    }
+
+    .glass-effect {
+
+        background: rgba(0, 0, 0, 0.4);
+
+        backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(212, 175, 55, 0.2);
+
+    }
+
+    .premium-card {
+
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+
+        border: 1px solid rgba(212, 175, 55, 0.3);
+
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .premium-card:hover {
+
+        transform: translateY(-8px);
+
+        border-color: rgba(212, 175, 55, 0.6);
+
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+
+    }
+
+    .hover-glow:hover {
+
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+
+        transform: translateY(-3px);
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .gold-gradient {
+
+        background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8860b 100%);
+
+    }
+
+    /* Enhanced Logo Styling */
+
+    .logo-container {
+
+        position: relative;
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        border: 2px solid rgba(212, 175, 55, 0.3);
+
+        transition: all 0.3s ease;
+
+    }
+
+    .logo-container:hover {
+
+        border-color: rgba(212, 175, 55, 0.8);
+
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+
+    }
+
+    .logo-container img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+
+    }
+
+    /* Fixed Mobile Menu */
+
+    .mobile-menu {
+
+        transform: translateY(-100%);
+
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+        background: rgba(0, 0, 0, 0.98);
+
+        backdrop-filter: blur(20px);
+
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+    }
+
+    .mobile-menu.active {
+
+        transform: translateY(0);
+
+    }
+
+    .hamburger {
+
+        width: 28px;
+
+        height: 28px;
+
+        position: relative;
+
+        cursor: pointer;
+
+        z-index: 1001;
+
+    }
+
+    .hamburger span {
+
+        display: block;
+
+        position: absolute;
+
+        height: 3px;
+
+        width: 100%;
+
+        background: #fff;
+
+        border-radius: 2px;
+
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        left: 0;
+
+    }
+
+    .hamburger span:nth-child(1) {
+
+        top: 0;
+
+    }
+
+    .hamburger span:nth-child(2) {
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+    }
+
+    .hamburger span:nth-child(3) {
+
+        bottom: 0;
+
+    }
+
+    .hamburger.active span:nth-child(1) {
+
+        top: 50%;
+
+        transform: translateY(-50%) rotate(45deg);
+
+    }
+
+    .hamburger.active span:nth-child(2) {
+
+        opacity: 0;
+
+        transform: translateX(20px);
+
+    }
+
+    .hamburger.active span:nth-child(3) {
+
+        bottom: 50%;
+
+        transform: translateY(50%) rotate(-45deg);
+
+    }
+
+    /* Floating Animation */
+
+    @keyframes float {
+
+        0%,
+
+        100% {
+
+            transform: translateY(0px);
+
+        }
+
+        50% {
+
+            transform: translateY(-20px);
+
+        }
+
+    }
+
+    .floating {
+
+        animation: float 6s ease-in-out infinite;
+
+    }
+
+    /* Enhanced Service Cards */
+
+    .service-card {
+
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+
+        border: 1px solid rgba(212, 175, 55, 0.2);
+
+        /* transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
+
+        position: relative;
+
+        overflow: hidden;
+
+    }
+
+    .service-card::before {
+
+        /* content: ''; */
+
+        position: absolute;
+
+        top: 0;
+
+        /* left: -100%; */
+
+        width: 100%;
+
+        height: 100%;
+
+        /* background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent); */
+
+        /* transition: left 0.5s ease; */
+
+    }
+
+    /* .service-card:hover::before {
+
+            left: 100%;
+
+        } */
+
+    .service-card:hover {
+
+        /* transform: translateY(-12px) scale(1.02); */
+
+        border-color: rgba(212, 175, 55, 0.6);
+
+        /* box-shadow: 0 25px 80px rgba(212, 175, 55, 0.25); */
+
+    }
+
+    .service-icon {
+
+        background: linear-gradient(135deg, #d4af37, #311414);
+
+        transition: all 0.3s ease;
+
+    }
+
+    .service-card:hover .service-icon {
+
+        transform: scale(1.1) rotate(5deg);
+
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+
+    }
+
+    /* Professional Portfolio Grid - Fixed Sizing */
+
+    .portfolio-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+        gap: 24px;
+
+        max-width: 1400px;
+
+        margin: 0 auto;
+
+    }
+
+    .reel-container {
+
+        position: relative;
+
+        aspect-ratio: 9/16;
+
+        background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        border: 2px solid rgba(212, 175, 55, 0.2);
+
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: 0 auto;
+
+    }
+
+    .reel-container:hover {
+
+        /* transform: scale(1.05); */
+
+        border-color: rgba(212, 175, 55, 0.6);
+
+        /* box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3); */
+
+    }
+
+    .reel-thumbnail {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: transform 0.4s ease;
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+    }
+
+    .reel-container:hover .reel-thumbnail {
+
+        /* transform: scale(1.1); */
+
+    }
+
+    /* Local Video Thumbnail Generation */
+
+    .video-thumbnail-generator {
+
+        display: none;
+
+    }
+
+    /* Thumbnail Loading States */
+
+    .thumbnail-loading {
+
+        position: absolute;
+
+        top: 50%;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        color: rgba(212, 175, 55, 0.8);
+
+        font-size: 14px;
+
+        z-index: 1;
+
+        text-align: center;
+
+    }
+
+    .thumbnail-error {
+
+        position: absolute;
+
+        inset: 0;
+
+        background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color: rgba(212, 175, 55, 0.6);
+
+        font-size: 12px;
+
+        text-align: center;
+
+        padding: 20px;
+
+    }
+
+    @keyframes shimmer {
+
+        0% {
+
+            opacity: 0.6;
+
+        }
+
+        50% {
+
+            opacity: 1;
+
+        }
+
+        100% {
+
+            opacity: 0.6;
+
+        }
+
+    }
+
+    .thumbnail-loading {
+
+        animation: shimmer 1.5s ease-in-out infinite;
+
+    }
+
+    .reel-overlay {
+
+        position: absolute;
+
+        inset: 0;
+
+        background: linear-gradient(to bottom,
+
+                transparent 0%,
+
+                transparent 60%,
+
+                rgba(0, 0, 0, 0.8) 100%);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        padding: 20px;
+
+        z-index: 2;
+
+    }
+
+    .reel-play-button {
+
+        position: absolute;
+
+        top: 50%;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 80px;
+
+        height: 80px;
+
+        background: rgba(212, 175, 55, 0.9);
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        backdrop-filter: blur(10px);
+
+        opacity: 0;
+
+        z-index: 3;
+
+    }
+
+    .reel-container:hover .reel-play-button {
+
+        opacity: 1;
+
+        transform: translate(-50%, -50%) scale(1.1);
+
+    }
+
+    .reel-play-button::after {
+
+        content: '';
+
+        width: 0;
+
+        height: 0;
+
+        border-left: 16px solid #000;
+
+        border-top: 12px solid transparent;
+
+        border-bottom: 12px solid transparent;
+
+        margin-left: 4px;
+
+    }
+
+    .reel-info {
+
+        margin-top: auto;
+
+        z-index: 2;
+
+    }
+
+    .reel-title {
+
+        font-size: 16px;
+
+        font-weight: 700;
+
+        color: white;
+
+        margin-bottom: 8px;
+
+        line-height: 1.2;
+
+    }
+
+    .reel-description {
+
+        font-size: 14px;
+
+        color: rgba(255, 255, 255, 0.8);
+
+        margin-bottom: 12px;
+
+        line-height: 1.3;
+
+    }
+
+    /* Minimal Social Stats with Lucide Icons */
+
+    .reel-stats {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 16px;
+
+        font-size: 12px;
+
+        color: rgba(255, 255, 255, 0.7);
+
+    }
+
+    .reel-stat {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 6px;
+
+    }
+
+    .reel-stat svg {
+
+        width: 14px;
+
+        height: 14px;
+
+        stroke: currentColor;
+
+    }
+
+    .category-filter {
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        margin-bottom: 40px;
+
+        flex-wrap: wrap;
+
+    }
+
+    .filter-btn {
+
+        padding: 10px 20px;
+
+        background: rgba(212, 175, 55, 0.1);
+
+        border: 1px solid rgba(212, 175, 55, 0.3);
+
+        border-radius: 25px;
+
+        color: rgba(212, 175, 55, 0.8);
+
+        font-size: 14px;
+
+        font-weight: 500;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+    }
+
+    .filter-btn:hover,
+
+    .filter-btn.active {
+
+        background: rgba(212, 175, 55, 0.2);
+
+        border-color: rgba(212, 175, 55, 0.8);
+
+        color: #ffd700;
+
+        transform: translateY(-2px);
+
+    }
+
+    /* New Testimonials Section - Your Experience, Our Pride */
+
+    .testimonials-container {
+
+        position: relative;
+
+        height: 400px;
+
+        overflow: hidden;
+
+        mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+
+        -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+
+    }
+
+    .testimonial-row {
+
+        position: absolute;
+
+        display: flex;
+
+        width: 100%;
+
+        height: 180px;
+
+        overflow: hidden;
+
+    }
+
+    .testimonial-row-left {
+
+        top: 0;
+
+    }
+
+    .testimonial-row-right {
+
+        top: 200px;
+
+    }
+
+    .testimonial-track {
+
+        display: flex;
+
+        gap: 20px;
+
+        animation-duration: 40s;
+
+        animation-timing-function: linear;
+
+        animation-iteration-count: infinite;
+
+        will-change: transform;
+
+    }
+
+    .testimonial-row-left .testimonial-track {
+
+        animation-name: slideLeft;
+
+    }
+
+    .testimonial-row-right .testimonial-track {
+
+        animation-name: slideRight;
+
+    }
+
+    /* Pause animation on hover */
+
+    .testimonial-row:hover .testimonial-track {
+
+        animation-play-state: paused;
+
+    }
+
+    @keyframes slideLeft {
+
+        0% {
+
+            transform: translateX(0);
+
+        }
+
+        100% {
+
+            transform: translateX(-50%);
+
+        }
+
+    }
+
+    @keyframes slideRight {
+
+        0% {
+
+            transform: translateX(-50%);
+
+        }
+
+        100% {
+
+            transform: translateX(0);
+
+        }
+
+    }
+
+    .testimonial-card-new {
+
+        flex-shrink: 0;
+
+        width: 320px;
+
+        padding: 24px;
+
+        border-radius: 20px;
+
+        background: rgba(0, 0, 0, 0.4);
+
+        backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(212, 175, 55, 0.2);
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        cursor: pointer;
+
+    }
+
+    .testimonial-card-new:hover {
+
+        /* transform: translateY(-8px); */
+
+        border-color: rgba(212, 175, 55, 0.6);
+
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+
+    }
+
+    .testimonial-header {
+
+        display: flex;
+
+        align-items: center;
+
+        margin-bottom: 16px;
+
+    }
+
+    .testimonial-avatar {
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-weight: bold;
+
+        font-size: 16px;
+
+        color: white;
+
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+        margin-right: 12px;
+
+        flex-shrink: 0;
+
+    }
+
+    .testimonial-name {
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        color: white;
+
+        margin: 0;
+
+    }
+
+    .testimonial-role {
+
+        font-size: 14px;
+
+        color: rgba(212, 175, 55, 0.8);
+
+        margin: 2px 0 0 0;
+
+    }
+
+    .testimonial-text {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        color: rgba(255, 255, 255, 0.8);
+
+        margin: 0;
+
+    }
+
+    /* Enhanced Video Modal for Reels */
+
+    .video-modal {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.95);
+
+        backdrop-filter: blur(15px);
+
+        z-index: 9999;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .video-modal.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+    .video-modal-content {
+
+        position: relative;
+
+        width: 90%;
+
+        max-width: 400px;
+
+        aspect-ratio: 9/16;
+
+        background: #000;
+
+        border-radius: 24px;
+
+        overflow: hidden;
+
+        box-shadow: 0 30px 80px rgba(212, 175, 55, 0.4);
+
+        border: 3px solid rgba(212, 175, 55, 0.4);
+
+        transform: scale(0.8) rotateX(10deg);
+
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .video-modal.active .video-modal-content {
+
+        transform: scale(1) rotateX(0deg);
+
+    }
+
+    .video-modal iframe,
+
+    .video-modal video {
+
+        width: 100%;
+
+        height: 100%;
+
+        border: none;
+
+    }
+
+    .video-modal-close {
+
+        position: absolute;
+
+        top: -60px;
+
+        right: 0;
+
+        width: 50px;
+
+        height: 50px;
+
+        background: rgba(212, 175, 55, 0.9);
+
+        border: none;
+
+        border-radius: 50%;
+
+        color: #000;
+
+        font-size: 24px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        backdrop-filter: blur(10px);
+
+    }
+
+    .video-modal-close:hover {
+
+        background: rgba(212, 175, 55, 1);
+
+        transform: scale(1.1) rotate(90deg);
+
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+
+    }
+
+    /* Contact Form Enhancements */
+
+    .contact-form input,
+
+    .contact-form textarea,
+
+    .contact-form select {
+
+        background: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid rgba(212, 175, 55, 0.3);
+
+        color: white;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .contact-form input:focus,
+
+    .contact-form textarea:focus,
+
+    .contact-form select:focus {
+
+        outline: none;
+
+        border-color: rgba(212, 175, 55, 0.8);
+
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+
+        transform: translateY(-2px);
+
+    }
+
+    /* Responsive Improvements */
+
+    @media (max-width: 1024px) {
+
+        .testimonials-container {
+
+            height: 350px;
+
+        }
+
+
+
+        .testimonial-card-new {
+
+            width: 280px;
+
+            padding: 20px;
+
+        }
+
+
+
+        .testimonial-row {
+
+            height: 160px;
+
+        }
+
+
+
+        .testimonial-row-right {
+
+            top: 180px;
+
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .hero-title {
+
+            font-size: 2.5rem;
+
+            line-height: 1.1;
+
+        }
+
+        .section-title {
+
+            font-size: 2rem;
+
+        }
+
+        .video-modal-content {
+
+            width: 95%;
+
+            max-width: 350px;
+
+            border-radius: 20px;
+
+        }
+
+        .video-modal-close {
+
+            top: -50px;
+
+            right: 10px;
+
+            width: 45px;
+
+            height: 45px;
+
+            font-size: 20px;
+
+        }
+
+        .service-card {
+
+            margin-bottom: 1rem;
+
+        }
+
+        .portfolio-grid {
+
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+            gap: 16px;
+
+        }
+
+        .reel-container {
+
+            border-radius: 16px;
+
+            max-width: 250px;
+
+        }
+
+        .reel-play-button {
+
+            width: 60px;
+
+            height: 60px;
+
+        }
+
+        .category-filter {
+
+            gap: 8px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .filter-btn {
+
+            padding: 8px 16px;
+
+            font-size: 13px;
+
+        }
+
+        .testimonials-container {
+
+            height: 300px;
+
+        }
+
+
+
+        .testimonial-card-new {
+
+            width: 250px;
+
+            padding: 16px;
+
+        }
+
+
+
+        .testimonial-row {
+
+            height: 140px;
+
+        }
+
+
+
+        .testimonial-row-right {
+
+            top: 160px;
+
+        }
+
+
+
+        .testimonial-name {
+
+            font-size: 14px;
+
+        }
+
+
+
+        .testimonial-role {
+
+            font-size: 12px;
+
+        }
+
+
+
+        .testimonial-text {
+
+            font-size: 13px;
+
+        }
+
+
+
+        .testimonial-avatar {
+
+            width: 40px;
+
+            height: 40px;
+
+            font-size: 14px;
+
+        }
+
+    }
+
+    /* Smooth Page Transitions */
+
+    * {
+
+        transition-property: transform, opacity, background-color, border-color, box-shadow;
+
+        transition-duration: 0.3s;
+
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .video-error {
+
+        position: absolute;
+
+        inset: 0;
+
+        background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color: rgba(212, 175, 55, 0.6);
+
+        text-align: center;
+
+        padding: 20px;
+
+    }
+
+    .video-error i {
+
+        width: 48px;
+
+        height: 48px;
+
+        margin-bottom: 16px;
+
+        stroke-width: 1.5;
+
+    }
+
+    .video-error p {
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        margin-bottom: 8px;
+
+    }
+
+    .video-error small {
+
+        font-size: 12px;
+
+        opacity: 0.8;
+
+    }
+</style>
 
 
 <body>
@@ -1704,8 +1794,9 @@
 
             <div class="portfolio-grid">
 
+
                 <!-- Reel 1 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/Car detailing shoot.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/Car+detailing+shoot.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/Car showroom.png" alt="Car Detailing Shoot" class="reel-thumbnail" />
                     <div class="reel-overlay">
@@ -1725,7 +1816,7 @@
                 </div>
 
                 <!-- Reel 2 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/Clothing brand.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/Clothing+brand.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/Clothing brand.png" alt="Clothing Brand Campaign" class="reel-thumbnail" />
                     <div class="reel-overlay">
@@ -1745,7 +1836,7 @@
                 </div>
 
                 <!-- Reel 3 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/motion graphics product ad.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/motion+graphics+product+ad.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/motion graphics product ad.png" alt="Motion Graphics Product Ad"
                         class="reel-thumbnail" />
@@ -1766,7 +1857,7 @@
                 </div>
 
                 <!-- Reel 4 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/Restaurant and bar.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/Restaurant+and+bar.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/Restaurant.png" alt="Restaurant and Bar Showcase" class="reel-thumbnail" />
                     <div class="reel-overlay">
@@ -1786,7 +1877,7 @@
                 </div>
 
                 <!-- Reel 5 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/UGC product ad.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/UGC+product+ad.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/UGC product ad.png" alt="UGC Product Ad" class="reel-thumbnail" />
                     <div class="reel-overlay">
@@ -1806,7 +1897,7 @@
                 </div>
 
                 <!-- Reel 6 -->
-                <div class="reel-container" data-category="brand" data-video-src="videos/Property shoot.mp4"
+                <div class="reel-container" data-category="brand" data-video-src="https://acedcastorages.s3.eu-north-1.amazonaws.com/videos/Property+shoot.mp4"
                     onclick="openVideoModal(this)">
                     <img src="thumbnails/Property shoot.png" alt="Property Shoot for Real Estate"
                         class="reel-thumbnail" />
@@ -2048,7 +2139,7 @@
                 <h2 class="section-title text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Let's Create
                     Excellence</h2>
                 <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                    Ready to elevate your brand to luxury status? Let's connect and build something extraordinary
+                    Ready elevate your brand to luxury status? Let's connect and build something extraordinary
                     together.
                 </p>
             </div>
@@ -2105,11 +2196,11 @@
                             </a>
                             <a href="https://behance.net/alluremarketing" target="_blank">
                                 <i data-lucide="palette" class="w-5 h-5"></i> <!-- Behance alt icon -->
-                            </a>
-                        </div>
-                    </div> 
+                    </a>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -2123,68 +2214,67 @@
 
 
     <!-- Footer -->
-<!-- Footer -->
-<footer class="py-8 sm:py-12 px-4 sm:px-6 bg-black/50 mt-16 sm:mt-20">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="lg:col-span-2">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="logo-container">
-                        <img src="logo.jpeg" alt="Allure Marketing Logo">
+    <!-- Footer -->
+    <footer class="py-8 sm:py-12 px-4 sm:px-6 bg-black/50 mt-16 sm:mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="logo-container">
+                            <img src="logo.jpeg" alt="Allure Marketing Logo">
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold gradient-text">ALLURE</div>
+                            <div class="text-xs text-gray-400 -mt-1">MARKETING</div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="text-lg font-bold gradient-text">ALLURE</div>
-                        <div class="text-xs text-gray-400 -mt-1">MARKETING</div>
-                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Let's Elevate
+                    </p>
                 </div>
-                <p class="text-gray-400 text-sm">
-                    Allure Marketing crafts premium content, high-ROI Meta ads, and strategic influencer campaigns to drive real growth.
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Website Development</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Google Ads Marketing</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Content creation</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Branding</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#review" class="hover:text-yellow-400 transition-colors">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-yellow-400 transition-colors">Our Work</a></li>
+                        <li><a href="#review" class="hover:text-yellow-400 transition-colors">Experience</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    © 2025 Allure Marketing.
                 </p>
             </div>
-            <div>
-                <h4 class="font-bold mb-4">Services</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Website Development</a></li>
-                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Google Ads Marketing</a></li>
-                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Content creation</a></li>
-                    <li><a href="#" class="hover:text-yellow-400 transition-colors">Branding</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Company</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#review" class="hover:text-yellow-400 transition-colors">About Us</a></li>
-                    <li><a href="#portfolio" class="hover:text-yellow-400 transition-colors">Our Work</a></li>
-                    <li><a href="#review" class="hover:text-yellow-400 transition-colors">Experience</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
-                </ul>
-            </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p class="text-sm text-gray-500">
-                © 2025 Allure Marketing.
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
-    <!-- Enhanced Universal Video Modal -->
+    <!-- Modal for Video -->
     <div id="videoModal" class="video-modal">
         <div class="video-modal-content">
-            <button class="video-modal-close" onclick="closeVideoModal()">×</button>
-            <iframe id="videoFrame" src="/placeholder.svg" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-            <video id="localVideoFrame" controls preload="metadata" style="display: none;">
-                <source id="videoSource1" src="/placeholder.svg" type="">
-                <source id="videoSource2" src="/placeholder.svg" type="">
-                <source id="videoSource3" src="/placeholder.svg" type="">
+            <iframe id="videoFrame" class="vimeo-embed" style="display:none;" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <video id="localVideoFrame" controls style="display:none;">
+                <source id="videoSource" type="video/mp4">
+                <source type="video/webm">
+                <source type="video/ogg">
                 Your browser does not support the video tag.
             </video>
-            <div id="videoError" class="video-error" style="display: none;">
-                <i data-lucide="video-off"></i>
-                <p>Unable to load video</p>
-                <small>Please check the video format or try a different file</small>
+            <div id="videoError" style="display:none;">
+                <p>Sorry, the video could not be loaded.</p>
             </div>
+            <button class="video-modal-close" onclick="closeVideoModal()">X</button>
         </div>
     </div>
 
@@ -2446,7 +2536,6 @@
                 if (playPromise !== undefined) {
                     playPromise.catch(error => {
                         console.log('Auto-play prevented:', error);
-                        // Auto-play was prevented, but video is still loaded
                     });
                 }
             }, 300);
@@ -2529,7 +2618,6 @@
         function showVideoError(errorElement, videoElement) {
             videoElement.style.display = 'none';
             errorElement.style.display = 'flex';
-            lucide.createIcons();
         }
 
         function closeVideoModal() {
